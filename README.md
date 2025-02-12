@@ -1,6 +1,6 @@
 # Dikkat Ömemli !!
-İndirilecek çalışma ekleri ve jar dosyası [releases]
-(https://github.com/taros84/Borsa-verileri/releases)
+İndirilecek çalışma ekleri ve jar dosyası 
+[releases](https://github.com/taros84/Borsa-verileri/releases)
 altındadır..
 
 # Borsa-verileri

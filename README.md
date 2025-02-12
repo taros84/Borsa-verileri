@@ -54,7 +54,7 @@ Gelelim Browserde çalıştırmaya.
 ``` {.sourceCode .bash}
 http://localhost:8484/price?ticker=THYAO.IS
 ```
-Türk borsalarında tinker yani senbol isme .IS eki koyunuz başka türlü çalılmayacaktır. 
+Türk borsalarında tinker yani senbol isme .IS eki koyunuz, diğer türlü hata çıktısı alırsınız.
 Abd ve cripto borsalarında senbol ismi yeterli. 
 
 Herşey düzgün gittiğinde ekrana şu şekilde bir çıktı alacaksınız.

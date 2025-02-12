@@ -4,7 +4,7 @@ Merhaba arkadaşlar, geliştirmiş olduğum jar dosyası ile browser üzerinden 
 Veriler borsa istanbul için 15 dakika gecikmelidir.
 Hadi başlayalım, öncelikle jar dosyamızı çalıştırmk için bazı kütüphaneleri yüklememiz lazım. 
 Buradaki can alıcı nokta tüm işletimlerde java yüklü olduğu sürece çalışır. 
-## Instal java
+## Install java (jdk)
 
 Linux tabanlı işletim sistemini baz alarak anlatıyorum.
 Android dede olur. ternux yüklü olması yeterli.
@@ -37,8 +37,7 @@ linux da
 ``` {.sourceCode .bash}
 cd /jar
 ```
-Klasöre gidebilir ve çalıştırabilirsiniz.
-isterseniz sayfa sonunda start stop yöntemi ile istersenizde altta bulanan kodla çalıltırabilirsiniz.
+Dilerseniz sayfa sonunda start stop yöntemi ile istersenizde bir satır altta bulanan kodla çalıştırabilirsiniz.
 
 ``` {.sourceCode .bash}
 #!/bin/bash

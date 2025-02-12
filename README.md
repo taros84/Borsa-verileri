@@ -22,7 +22,7 @@ Dosyaları güncelledik. Sıra jdk yüklemede.
 ``` {.sourceCode .bash}
 pkg search openjdk
 ```
-
+Sonra jdk yoksa yükleyelim..
 ``` {.sourceCode .bash}
 pkg install openjdk-21 -y
 

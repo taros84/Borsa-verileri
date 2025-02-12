@@ -78,7 +78,7 @@ Herşey düzgün gittiğinde ekrana şu şekilde bir çıktı alacaksınız.
 }
 ```
 
-buraya kadar geldiğinize göre herşey yolunddır Esenlikle kalın.
+buraya kadar geldiğinize göre herşey yolundadır Esenlikle kalın.
 
 ## Çalışan Jar dosyasını durdurma
 

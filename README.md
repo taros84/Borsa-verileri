@@ -1,1 +1,82 @@
-# Borsa-verisileri
+# Borsa-verileri
+Merhaba arkadaşlar, geliştirmiş olduğum jar dosyası ile browser üzerinden tüm borsa verilerini alablirsiniz. coin, nasdaq, borsaistanbul vs.. 
+çok ayrıntılı olmasada temel olarak işe yarayacak şekilde. 
+Hadi başlayalım, öncelikle jar dosyamızı çalıştırmk için bazı kütüphaneleri yüklememiz lazım. 
+Buradaki can alıcı nokta tüm işletimlerde java yüklü olduğu sürece çalışır. 
+## Instal java
+
+Linux tabanlı işletim sistemini baz alarak anlatıyorum.
+Android dede olur. ternux yüklü olması yeterli.
+
+``` {.sourceCode .bash}
+pkg update && pkg upgrade -y
+
+```
+Dosyaları güncelledik. Sıra jdk yüklemede.
+``` {.sourceCode .bash}
+pkg install openjdk -y
+```
+Javw yüklendiğini kontrol edelim..
+
+``` {.sourceCode .bash}
+java -version
+```
+Buraya kadar java dosyalarını yani jdk yükledik. Şimdi sıra jar dosyamızı çalıştırmaya.
+
+``` {.sourceCode .bash}
+#!/bin/bash
+java -cp "App-1.0.jar:libs/*" com.api.htfinance.Main 8484
+```
+
+Dikkat ettiyseniz 8484 gibi rakamlar var bu çalışacağı port numarasıdır dilediğimiz gibi kullanabilirsiniz.
+standart port 8090'dır
+
+Gelelim Browserde çalıştırmaya.
+## Browserde Aç
+
+
+``` {.sourceCode .bash}
+http://localhost:8484/price?ticker=THYAO.IS
+```
+Türk borsalarında tinker yani senbol isme .IS eki koyunuz başka türlü çalılmayacaktır. 
+Abd ve cripto borsalarında senbol ismi yeterli. 
+
+Herşey düzgün gittiğinde ekrana şu şekilde bir çıktı alacaksınız.
+``` {.sourceCode .bash}
+{
+  "symbol": "THYAO.IS",
+  "sirketismi": "Türk Hava Yollari Anonim Ortakligi",
+  "sirketkisaismi": "TURK HAVA YOLLARI",
+  "ilkislemtarihi": "10.05.2000",
+  "sonislemtarihi": "12.02.2025 / 15:17:47",
+  "yillikendusukfiyat": 257.5,
+  "yillikenyuksekfiyat": 332,
+  "guncelfiyat": 320,
+  "gunicienyuksekfiyat": 321.25,
+  "guniciendusukfiyat": 316,
+  "dunkapanisfiyati": 319.5,
+  "islemgorenlotsayisi": "24.515.132"
+}
+```
+
+buraya kadar geldiğinize göre herşey yolunddır Esenlikle kalın.
+
+## Çalışan Jar dosyasını durdurma
+
+``` {.sourceCode .bash}
+#!/bin/bash
+
+JAR_NAME="com.api.htfinance.Main"  # Buraya durdurmak istediğin JAR dosyasının adını yaz
+
+# JAR dosyasını çalıştıran işlemin PID'sini bul
+PID=$(jps -l | grep "$JAR_NAME" | awk '{print $1}')
+
+if [ -z "$PID" ]; then
+    echo "Çalışan $JAR_NAME bulunamadı."
+else
+    echo "$JAR_NAME çalışıyor (PID: $PID). Durduruluyor..."
+    kill "$PID"
+    echo "Durduruldu."
+fi
+
+```

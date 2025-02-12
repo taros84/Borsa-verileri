@@ -1,3 +1,6 @@
+# Dikkat Ömemli !!
+İndirilecek çalışma ekleri ve jar dosyası releases altındadır..
+
 # Borsa-verileri
 Merhaba arkadaşlar, geliştirmiş olduğum jar dosyası ile browser üzerinden tüm borsa verilerini alablirsiniz. coin, nasdaq, borsaistanbul vs.. 
 çok ayrıntılı olmasada temel olarak işe yarayacak şekilde. 

@@ -1,6 +1,7 @@
 # Borsa-verileri
 Merhaba arkadaşlar, geliştirmiş olduğum jar dosyası ile browser üzerinden tüm borsa verilerini alablirsiniz. coin, nasdaq, borsaistanbul vs.. 
 çok ayrıntılı olmasada temel olarak işe yarayacak şekilde. 
+Veriler borsa istanbul için 15 dakika gecikmelidir.
 Hadi başlayalım, öncelikle jar dosyamızı çalıştırmk için bazı kütüphaneleri yüklememiz lazım. 
 Buradaki can alıcı nokta tüm işletimlerde java yüklü olduğu sürece çalışır. 
 ## Instal java
@@ -23,12 +24,28 @@ java -version
 ```
 Buraya kadar java dosyalarını yani jdk yükledik. Şimdi sıra jar dosyamızı çalıştırmaya.
 
+## Jar klasörüne gitme ve çalıştırma
+anlatacaklarım root dizininde olduğunuzu varsayarak yapıyorum.
+Android'de de sdcard dizini.
+Android'de
+``` {.sourceCode .bash}
+cd /sdcard
+cd jar
+```
+linux da
+
+``` {.sourceCode .bash}
+cd /jar
+```
+Klasöre gidebilir ve çalıştırabilirsiniz.
+isterseniz sayfa sonunda start stop yöntemi ile istersenizde altta bulanan kodla çalıltırabilirsiniz.
+
 ``` {.sourceCode .bash}
 #!/bin/bash
 java -cp "App-1.0.jar:libs/*" com.api.htfinance.Main 8484
 ```
 
-Dikkat ettiyseniz 8484 gibi rakamlar var bu çalışacağı port numarasıdır dilediğimiz gibi kullanabilirsiniz.
+Dikkat ettiy seniz 8484 gibi rakamlar var bu çalışacağı port numarasıdır dilediğimiz gibi kullanabilirsiniz.
 standart port 8090'dır
 
 Gelelim Browserde çalıştırmaya.
@@ -79,4 +96,14 @@ else
     echo "Durduruldu."
 fi
 
+```
+## Start ve stop 
+Daha pratik olması için .sh uzantılı dosyalarınıda ekledim.
+start.sh 
+``` {.sourceCode .bash}
+bash start.sh
+```
+durdurmak içinse stop.sh kullanıyoruz..
+``` {.sourceCode .bash}
+bash stop.sh
 ```

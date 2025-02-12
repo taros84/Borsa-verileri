@@ -26,6 +26,29 @@ Javw yüklendiğini kontrol edelim..
 java -version
 ```
 Buraya kadar java dosyalarını yani jdk yükledik. Şimdi sıra jar dosyamızı çalıştırmaya.
+## UnInstall java (jdk)
+Android cihazınıza kurduğunuz jdk bazen performans sorunu yapabilir kaldırmak isterseniz terminalde bu kodu kulanınız.
+
+``` {.sourceCode .bash}
+if command -v java &> /dev/null
+then
+    echo "Java yüklü. Kaldırılıyor..."
+    pkg uninstall openjdk-17 -y || apt remove --purge openjdk-17 -y || dpkg --remove --force-remove-reinstreq openjdk-17
+    rm -rf /data/data/com.termux/files/usr/lib/jvm/openjdk*
+    rm -rf /data/data/com.termux/files/usr/bin/java
+    apt autoremove -y && apt clean
+    echo "Java kaldırıldı."
+else
+    echo "Java zaten yüklü değil."
+fi
+
+```
+Silindiğine emin olmak için Şu kodu kullanıyoruz. Hata almış isek kaldırılmıştır.
+
+``` {.sourceCode .bash}
+java -version
+```
+
 
 ## Jar klasörüne gitme ve çalıştırma
 anlatacaklarım root dizininde olduğunuzu varsayarak yapıyorum.

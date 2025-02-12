@@ -32,7 +32,7 @@ Java'yı kontrol edelim..
 ``` {.sourceCode .bash}
 java -version
 ```
-Buraya kadar java dosyalarını yani jdk yükledik. Şimdi sıra jar dosyamızı çalıştırmaya.
+Buraya kadar java dosyalarını yani jdk yükledik. Şimdi sıra jar dosyamızı çalıştırmaya. Ama olurda uninstall yani kaldırmak istersenizde şu şekilde işlem görünüz.
 ## UnInstall java (jdk)
 Android cihazınıza kurduğunuz jdk bazen performans sorunu yapabilir kaldırmak isterseniz terminalde bu kodu kulanınız.
 

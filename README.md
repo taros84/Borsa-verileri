@@ -72,9 +72,10 @@ Dilerseniz sayfa sonunda start stop yöntemi ile istersenizde bir satır altta b
 java -cp "App-1.0.jar:libs/*" com.api.htfinance.Main 8484
 ```
 
-Dikkat ettiy seniz 8484 gibi rakamlar var bu çalışacağı port numarasıdır dilediğimiz gibi kullanabilirsiniz.
-standart port 8090'dır
-
+Dikkat ettiyseniz 8484 gibi rakamlar mevcut. Bu rakamların olduğu alan çalışacak port numarası atamasıdır, 
+kendiniz belirleyeceğiniz port numarası atamasıda olabilir yada tamamen kaldırarak
+standart port 8090'dır onu kullanabilirsiniz..
+Tercih size kalmış.
 Gelelim Browserde çalıştırmaya.
 ## Browserde Aç
 

@@ -17,8 +17,15 @@ pkg update && pkg upgrade -y
 
 ```
 Dosyaları güncelledik. Sıra jdk yüklemede.
+
+Önce yüklü olup olmadığını kontrol edelim..
 ``` {.sourceCode .bash}
-pkg install openjdk -y
+pkg search openjdk
+```
+
+``` {.sourceCode .bash}
+pkg install openjdk-21 -y
+
 ```
 Javw yüklendiğini kontrol edelim..
 
@@ -29,19 +36,14 @@ Buraya kadar java dosyalarını yani jdk yükledik. Şimdi sıra jar dosyamızı
 ## UnInstall java (jdk)
 Android cihazınıza kurduğunuz jdk bazen performans sorunu yapabilir kaldırmak isterseniz terminalde bu kodu kulanınız.
 
+Yüklü olup olmadığını kontrol edelim..
 ``` {.sourceCode .bash}
-if command -v java &> /dev/null
-then
-    echo "Java yüklü. Kaldırılıyor..."
-    pkg uninstall openjdk-17 -y || apt remove --purge openjdk-17 -y || dpkg --remove --force-remove-reinstreq openjdk-17
-    rm -rf /data/data/com.termux/files/usr/lib/jvm/openjdk*
-    rm -rf /data/data/com.termux/files/usr/bin/java
-    apt autoremove -y && apt clean
-    echo "Java kaldırıldı."
-else
-    echo "Java zaten yüklü değil."
-fi
+pkg search openjdk
+```
+Aradıktan sonra kaldırmak için.
 
+``` {.sourceCode .bash}
+pkg uninstall openjdk-21 -y
 ```
 Silindiğine emin olmak için Şu kodu kullanıyoruz. Hata almış isek kaldırılmıştır.
 

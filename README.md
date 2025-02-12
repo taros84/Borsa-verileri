@@ -10,7 +10,7 @@ Buradaki can alıcı nokta tüm işletimlerde java yüklü olduğu sürece çal�
 ## Install java (jdk)
 
 Linux tabanlı işletim sistemini baz alarak anlatıyorum.
-Android dede olur. ternux yüklü olması yeterli.
+Android işletimde de olur. ternux yüklü olması yeterli.
 
 ``` {.sourceCode .bash}
 pkg update && pkg upgrade -y

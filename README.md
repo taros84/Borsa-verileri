@@ -27,7 +27,7 @@ Sonra jdk yoksa yükleyelim..
 pkg install openjdk-21 -y
 
 ```
-Java'yo kontrol edelim..
+Java'yı kontrol edelim..
 
 ``` {.sourceCode .bash}
 java -version

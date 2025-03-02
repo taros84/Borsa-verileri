@@ -1,4 +1,4 @@
-# Dikkat Ömemli !!
+# Dikkat Önemli !!
 İndirilecek çalışma ekleri ve jar dosyası 
 [releases](https://github.com/taros84/Borsa-verileri/releases)
 altındadır..
